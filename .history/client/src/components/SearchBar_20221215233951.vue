@@ -43,6 +43,10 @@ export default {
 </script>
   
   <style scoped>
+.searchbar {
+  width: 50%;
+}
+
 input {
   padding: 5px;
 }

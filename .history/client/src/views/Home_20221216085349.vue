@@ -108,7 +108,7 @@ export default {
       vm.categoriesMap = {};
       vm.items = response.data.sort((a, b) => b.d_created - a.d_created);
       vm.generateCategories();
-      vm.items = response.data.map((item) => {
+      vm.items = vm.items.map((item) => {
         return {
           ...item,
           actions: vm.setActions(item.resource_type),

@@ -4,11 +4,14 @@
       viewType === 'list' ? 'item-container-list' : 'item-container-dialog',
     ]"
   >
-    <div class="main">
+    <div :class="[viewType === 'list' ? 'main-list' : 'main-dialog']">
       <div :class="[viewType === 'list' ? 'mr-3' : '', 'icon-container']">
         <img
           :src="item.topic_data.icon_path"
-          :class="[item.product === 'bpjr' ? 'bpjr-icon' : 'bp-icon', 'icon']"
+          :class="[
+            item.product === 'bpjr' ? 'bpjr-icon' : 'bp-icon',
+            viewType === 'list' ? 'icon-list' : 'icon-dialog',
+          ]"
         />
         <span
           v-if="item.product === 'bpjr'"
@@ -95,18 +98,20 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
 
-.item-container-list > .main {
+  .main-list {
   display: flex;
   align-items: center;
+}
 }
 
 .item-container-dialog {
   margin-top: 40px;
 }
 
-.item-container-dialog > .main {
+
+
+.main-dialog {
   display: block;
   text-align: center;
 }
@@ -120,13 +125,13 @@ p {
   display: inline-block;
 }
 
-.item-container-list .icon {
+.icon-list {
   border-radius: 50%;
   height: 40px;
   padding: 5px;
 }
 
-.item-container-dialog .icon {
+.icon-dialog {
   border-radius: 50%;
   height: 70px;
   padding: 5px;

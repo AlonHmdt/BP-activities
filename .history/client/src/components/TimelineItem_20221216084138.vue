@@ -120,13 +120,13 @@ p {
   display: inline-block;
 }
 
-.item-container-list .icon {
+.item-container-list > .icon {
   border-radius: 50%;
   height: 40px;
   padding: 5px;
 }
 
-.item-container-dialog .icon {
+.item-container-dialog > .icon {
   border-radius: 50%;
   height: 70px;
   padding: 5px;

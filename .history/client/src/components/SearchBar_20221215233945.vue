@@ -1,5 +1,5 @@
 <template>
-  <div class="w-4">
+  <div class="w-5">
     <div class="p-inputgroup">
       <InputText
         v-model="keyword"
@@ -43,6 +43,10 @@ export default {
 </script>
   
   <style scoped>
+.searchbar {
+  width: 50%;
+}
+
 input {
   padding: 5px;
 }

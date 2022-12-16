@@ -1,6 +1,6 @@
 <template>
   <div class="w-4">
-    <div class="p-inputgroup">
+    <div class="">
       <InputText
         v-model="keyword"
         placeholder="Search Timeline"
